@@ -1,0 +1,24 @@
+body{
+    height:100vh;
+    background-color:#24353f ;
+}
+.navbar{
+    background-color:transparent;
+    
+}
+.home{
+    display:flex;
+    background-color:#24353f;
+    width:60%;
+    margin:  50px auto;
+    height:40vh;
+    justify-content:center;
+    align-items:center;
+    border-radius: 5px;
+    box-shadow: -5px 2px 54px -9px rgb(0 0 0);
+    color:white;
+
+}
+.navbar-toggler-icon .fa{
+
+}

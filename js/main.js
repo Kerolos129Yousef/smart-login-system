@@ -7,21 +7,29 @@ let Name = document.getElementById("name");
 // let containerContent =getElementsByClassName("containerContent");
 let mood = "signin"
 let error = document.getElementById("error");
+let hello =document.getElementById("hello");
+let temp;
 let logedSuccess=false;
 let usersInfo;
 if (localStorage.getItem("usersInfo") != null) {
     usersInfo = JSON.parse(localStorage.getItem("usersInfo"));
+    
+
 }
 else {
     usersInfo = [];
+    
+
 }
-
-
 Name.style.display = "none";
+
+
+
 sign.addEventListener("click", () => {
     // loginCard.insertBefore(name,login.firstElementChild)
     if (mood === "signIn") {
         signInMood();
+       
     }
     else {
         signUpMood()
@@ -94,6 +102,7 @@ function logIn() {
         for (let i = 0; i < signedInfo.length; i++) {
             if (signedInfo[i].userEmail.includes(Email.value) && signedInfo[i].userPass.includes(Password.value)) {
                 logedSuccess=true;
+                
                 return goHome();
 
             }
@@ -109,9 +118,8 @@ function logIn() {
 }
 
 function goHome() {
-    error.innerHTML = 'you logged into Sucussfully'
-    error.style.color="green";
-    showError();
+    window.location.href="home.html"
+   
 }
 
 function showError() {
